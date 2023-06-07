@@ -96,47 +96,47 @@ function resetearCapcha() {
 */
 
 
-  let array_precios = [           /* precios de los elementos que vendo */
-  {
-    item: "Entrada 2D",
-    precioUnit: 1000,
-  },
-  {
-    item: "Entrada 3D",
-    precioUnit: 1400,
-  },
-  {
-    item: "Balde Pochoclos",
-    precioUnit: 1400,
-  },
-  {
-    item: "Combo Dúo",
-    precioUnit: 2600,
-  },
-  {
-    item: "Combo Familiar",
-    precioUnit: 4600,
-  },
-  {
-    item: "Combo Pelicula",
-    precioUnit: 3400,
-  },
-  {
-    item: "Garrapiñada",
-    precioUnit: 300,
-  },
-  {
-    item: "Milka Oreo",
-    precioUnit: 500,
-  },
-  {
-    item: "Shot",
-    precioUnit: 650,
-  },
-  {
-    item: "Vaso Gaseosa",
-    precioUnit: 500,
-  },
+let array_precios = [           /* precios de los elementos que vendo */
+{
+  item: "Entrada 2D",
+  precioUnit: 1000,
+},
+{
+  item: "Entrada 3D",
+  precioUnit: 1400,
+},
+{
+  item: "Balde Pochoclos",
+  precioUnit: 1400,
+},
+{
+  item: "Combo Dúo",
+  precioUnit: 2600,
+},
+{
+  item: "Combo Familiar",
+  precioUnit: 4600,
+},
+{
+  item: "Combo Pelicula",
+  precioUnit: 3400,
+},
+{
+  item: "Garrapiñada",
+  precioUnit: 300,
+},
+{
+  item: "Milka Oreo",
+  precioUnit: 500,
+},
+{
+  item: "Shot",
+  precioUnit: 650,
+},
+{
+  item: "Vaso de Gaseosa",
+  precioUnit: 500,
+},
 ];
 
 let cuerpoTablaShop = document.querySelector('#body_table_shop');
@@ -151,43 +151,43 @@ botonShopPush.addEventListener("click", agregaPedido);
 let sumaTotal = 0;
 
 function agregaPedido(e) {
-  e.preventDefault();
-  console.log("estoy dentro de consola boton");
+e.preventDefault();
+console.log("estoy dentro de consola boton");
 
-  let itemPedido = document.querySelector("#item").value;;
-  let cantidadItems = document.querySelector('#cant_items').value;
-  if (cantidadItems!="") {
-    let filaShop ={
-      item: itemPedido,
-      cantidad: parseInt(cantidadItems),
-      descuento: function () {
-        if(this.cantidad >= CANTMINDESCUENTO){
-          return true;
-        };
-      },
-      subTot: function () {
-        let position = 0;
-        while ((position < array_precios.length)&&(this.item != array_precios[position].item)) {
-          position++;
-        }
-        if (filaShop.descuento()){
-          return ((cantidadItems * (1-DESCUENTOPORCENT) * (array_precios[position].precioUnit)).toFixed(2));
-        } else {
-        return (cantidadItems * (array_precios[position].precioUnit));
-        }
-      },
-    };
-    array_pedido.push(filaShop);
-    let claseFila;
-    if (filaShop.descuento()) {
-      claseFila = "resaltaFila";
-    } else {
-      claseFila = "";
-    }
-    cuerpoTablaShop.innerHTML += `<tr class="${claseFila}"><td>${filaShop.item}</td><td>${filaShop.cantidad}</td><td>${filaShop.subTot()}</td></tr>`;
-    inputCant.value= "";
-    totalTabla.innerHTML = sumaTotal+=parseInt(filaShop.subTot());
+let itemPedido = document.querySelector("#item").value;;
+let cantidadItems = document.querySelector('#cant_items').value;
+if (cantidadItems!="") {
+  let filaShop ={
+    item: itemPedido,
+    cantidad: parseInt(cantidadItems),
+    descuento: function () {
+      if(this.cantidad >= CANTMINDESCUENTO){
+        return true;
+      };
+    },
+    subTot: function () {
+      let position = 0;
+      while ((position < array_precios.length)&&(this.item != array_precios[position].item)) {
+        position++;
+      }
+      if (filaShop.descuento()){
+        return ((cantidadItems * (1-DESCUENTOPORCENT) * (array_precios[position].precioUnit)).toFixed(2));
+      } else {
+      return (cantidadItems * (array_precios[position].precioUnit));
+      }
+    },
+  };
+  array_pedido.push(filaShop);
+  let claseFila;
+  if (filaShop.descuento()) {
+    claseFila = "resaltaFila";
+  } else {
+    claseFila = "";
   }
+  cuerpoTablaShop.innerHTML += `<tr class="${claseFila}"><td>${filaShop.item}</td><td>${filaShop.cantidad}</td><td>${filaShop.subTot()}</td></tr>`;
+  inputCant.value= "";
+  totalTabla.innerHTML = sumaTotal+=parseInt(filaShop.subTot());
+}
 };
 
 let botonShopPop = document.querySelector('#borraUlt').addEventListener("click", ()=>{
@@ -205,9 +205,16 @@ let botonShopDel = document.querySelector('#eliminaTodo').addEventListener("clic
 
 function mostrarTabla() {
   for (let i = 0; i < array_pedido.length; i++) {
-    cuerpoTablaShop.innerHTML += `<tr><td>${array_pedido[i].item}</td><td>${array_pedido[i].cantidad}</td><td>${array_pedido[i].subTot()}</td></tr>`;
+    let claseFila;
+    if (array_pedido[i].descuento()) {
+      claseFila = "resaltaFila";
+    } else {
+      claseFila = "";
+    }
+    cuerpoTablaShop.innerHTML += `<tr class="${claseFila}"><td>${array_pedido[i].item}</td><td>${array_pedido[i].cantidad}</td><td>${array_pedido[i].subTot()}</td></tr>`;
   };
 }
+
 
 
 /*

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+  <title>Paradiso Cinema</title>
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav" id="nav">
+      <div class="logo-user">
+        <a href="register.html"><img src="img/user-circle-svgrepo-com32.svg" alt=""></a>
+      </div>
+      <div class="logo">
+        <img src="img/LogoWhite-cinemaParadiso.png" alt="">
+        <h4>"Frase de cine"</h4>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <button class="btn-cross" id="btn-cross"><img class="open-close" src="img/close-icon.svg" alt="cerrar menu mobile"></button>
+        <li class="item-nav"><a class="navLink" href="index.html">Inicio</a></li>
+        <li class="item-nav"><a class="navLink" href="#">En cartel</a></li>
+        <li class="item-nav"><a class="navLink" href="commingsoon.html">Proximas</a></li>
+        <li class="item-nav"><a class="navLink" href="register.html">Ticket y shop</a></li>
+        <li class="item-nav"><a class="navLink" href="#">Contactanos</a></li>
+      </ul>
+      <button class="btn-hambur" id="btn-hambur"><img class="open-close" src="img/hamburger-icon.svg" alt="abrir menu mobile"></button>
+    </nav>
+  </header>
+  <img src="img/antigua-máquina-de-cine.jpg" alt="antigua maquina de cine">
+  <section class="sectionGridReg">
+    <section class="form_shop" id="form_shop">
+      <section id="section_shop" class="pedido_shop ocultaRegistro">
+        <h1 id="saludo_usuario"></h1>
+        <h2>haz tu pedido aquí</h2>
+        <form id="formShop" action="#">
+          <label for="item">Producto</label>
+          <select name="productos" id="item">
+            <option value="Entrada 2D">Entrada 2D</option>
+            <option value="Entrada 3D">Entrada 3D</option>
+            <option value="Balde Pochoclos">Balde Pochoclos</option>
+            <option value="Combo Dúo">Combo Dúo</option>
+            <option value="Combo Familiar">Combo Familiar</option>
+            <option value="Combo Pelicula">Combo Pelicula</option>
+            <option value="Garrapiñada">Garrapiñada</option>
+            <option value="Milka Oreo">Milka Oreo</option>
+            <option value="Shot">Shot</option>
+            <option value="Vaso de gaseosa">Vaso de gaseosa</option>
+          </select>
+          <label for="cant_items">Cantidad: </label>
+          <input required type="number" name="cantidad" id="cant_items">
+          <button class="btnShop" id="agrega1">agregar</button>
+        </form>
+        <div class="btns_delete">
+          <button class="btnShop" id="borraUlt">borrar ultimo</button>
+          <button class="btnShop" id="eliminaTodo">cancelar pedido</button>
+        </div>
+        <table class="shop_table">
+          <thead>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Sub Total</th>
+          </thead>
+          <tbody id="body_table_shop">
+          </tbody>
+          <tfoot>
+            <td></td>
+            <td>Total</td>
+            <td id="total_suma"></td>
+          </tfoot>
+        </table>
+      </section>
+      <section class="registro" id="registro_section">
+        <h1>registrate aquí</h1>
+        <form id="form" action="#">
+          <h4>Ingrese el captcha que se lee debajo para validar el envío</h4>
+          <div class="captcha-area">
+            <img src="img/Background-with-randomly-drawn-lines-and-special-effects-in-Step-9.png" alt="Fondo captcha">
+            <h1 id="cap"></h1>
+          </div>
+          <div class="prueba">
+            Verificacion: <input class="vaciocapcha" id="verif" type="text" value=""/>
+            <input type="submit" class="vaciocapcha" id="btn" value="Enviar"/>
+          </div>
+          * Nombre: <input required id="name_user" type="text" value=""/>
+          Apellido: <input type="text" value=""/>
+          Fecha de nacimiento: <input type="date" name="fecha" value=""/>
+          e-mail: <input type="email" name="email" value=""/>
+          Telefono: <input type="tel" name="telefono" value=""/>
+          <h6>(*) Casillero requerido</h6>
+          <div id="checkbox">
+            <label for="checkbox">Deseo recibir promociones en un futuro.</label>
+            <input type="checkbox" name="cajacheck">
+          </div>
+        </form>
+        <div class="reset">
+          <button id="reset"><img src="img/reset.png" alt="imagen como botón"></button>
+        </div>
+      </section>
+    </section>
+    <aside class="sidebar">
+      <a href="#section_shop"><img src="img/comboFamiliar-aside.png" alt=""></a>
+      <a href="#section_shop"><img src="img/comboMario-aside.png" alt=""></a>
+      <a href="#section_shop"><img src="img/comboShot-aside.png" alt=""></a>
+    </aside>
+  </section>
+  <footer class="pie-pag">
+    <div class="derechos">
+      <h3>cine el septimo sello</h3>
+      <h4>avenida siempre viva nº654 - springfield</h4>
+      <h5>tpe 1 - web 1 - tudai - unicen - cresta</h5>
+      <h6>@2023 - todos los derechos reservados</h6>
+    </div>
+    <img src="img/Logo-cinemaParadiso.png" alt="logo miniatura">
+    <div class="social2">
+      <h4>seguinos en nuestras redes</h4>
+      <a href="#"><img class="img-social2" src="img/social-facebook-circular-svgrepo-com.svg" alt="Facebook"></a>
+      <a href="#"><img class="img-social2" src="img/social-instagram-circular-svgrepo-com.svg" alt="Instagram"></a>
+      <a href="#"><img class="img-social2" src="img/social-twitter-circular-svgrepo-com.svg" alt="Twitter"></a>
+    </div>
+  </footer>
+  <script src="js/nav.js"></script>
+  <script type="text/javascript" src="js/capcha.js"></script>
+</body>
+</html>

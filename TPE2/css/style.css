@@ -209,7 +209,7 @@ li{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  transition: 0.5s;
+  transition: 0.8s;
   border: 5px solid var(--menu-mobile-background-color);
   border-radius: 10px;
 }

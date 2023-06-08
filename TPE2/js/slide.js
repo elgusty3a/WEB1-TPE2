@@ -38,7 +38,7 @@ function pasarImagen() {
   let showImage = arregloImg[imgActual];
   //console.log(imgActual);
   //console.log(showImage);
-  contImgSlide.style = "background-image: url(img/"+showImage+");transition: 0.5s;";
+  contImgSlide.style = "background-image: url(img/"+showImage+");transition: 0.8s;";
 }
 
 function detenerSlide() {

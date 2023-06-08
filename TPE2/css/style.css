@@ -101,6 +101,13 @@ li{
   height: 100%;
   align-items: center;
   background-color: var(--menu-mobile-background-color);
+  background-image: url(../img/movietape4-1.svg);
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
   overflow-y: auto;
   transition: opacity 0.3s;
   visibility: hidden;

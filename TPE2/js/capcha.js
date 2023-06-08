@@ -158,16 +158,6 @@ botonShopPush.addEventListener("click", agregaPedido);
 
 botonShopPushX3.addEventListener("click", agregaPedido);
 
-// function repetirEntrada(e) {
-//   e.preventDefault();
-//   console.log("estoy dentro de consola boton x 3");
-//   //agregaPedido();
-//   for (let i = 0; i < 3; i++) {
-//     console.log("estoy dentro del for boton x 3");
-//     agregaPedido();
-//   };
-// }
-
 
 
 function agregaPedido(e) {

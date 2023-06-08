@@ -10,19 +10,29 @@
   --theme-cards: teal;
 }
 
+
 body {
   /* font-family: 'Montserrat', sans-serif; */
-  background-color: var(--theme-color);
+  /* background-color: var(--theme-color); */
+  background-color: #0f5f6d;
   color: var(--text-color);
+  background-image: url(../img/antigua-máquina-de-cine.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
 }
 
 body > img{
-  position: fixed;
+  position: absolute;
   top: 0px;
   opacity: 0.095;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  /* max-height: 1180px; */
   object-fit: cover;
+  object-position: center;
   z-index: -1;
 }
 
@@ -783,7 +793,7 @@ footer{
 	padding: 15px 20px;
 	align-content: center;
   grid-area: footer;
-  width: 100vw;
+  /* width: 100vw; */
 }
 .derechos{
 	text-transform: uppercase;
@@ -1026,10 +1036,20 @@ footer > img{
 
   /* Menu */
 
-  body{
+  /* body > img{
+    position: fixed;
+    top: 0px;
+    opacity: 0.095;
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+    background-attachment: ;
+  } */
+  /* body{
     position: relative;
     min-height:  max-content;
-  }
+  } */
 
   .nav{
     align-items: center;
@@ -1112,15 +1132,13 @@ footer > img{
 
 
 
-
-
-
-  footer{
+  /* footer{
     position: absolute;
-    bottom: -20vh;
+    bottom: 0;
+    margin-bottom: 90px;
     width: 100vw;
     padding: 15px 20px;
-  }
+  } */
 
 }
 

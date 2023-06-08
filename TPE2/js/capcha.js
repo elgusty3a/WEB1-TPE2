@@ -156,53 +156,62 @@ botonShopPush.addEventListener("click", agregaPedido);
 
 /*     este es el evento del boton x 3      */
 
-botonShopPushX3.addEventListener("click", function() {
-  console.log("estoy dentro de consola boton x 3");
-  //agregaPedido();
-  for (let i = 0; i < 3; i++) {
-    console.log("estoy dentro del for boton x 3");
-    agregaPedido();
-  };
-});
+botonShopPushX3.addEventListener("click", agregaPedido);
+
+// function repetirEntrada(e) {
+//   e.preventDefault();
+//   console.log("estoy dentro de consola boton x 3");
+//   //agregaPedido();
+//   for (let i = 0; i < 3; i++) {
+//     console.log("estoy dentro del for boton x 3");
+//     agregaPedido();
+//   };
+// }
 
 
 
 function agregaPedido(e) {
   console.log("estoy dentro de consola boton x 3");
   e.preventDefault();
+  let repeticiones = 1;
   let itemPedido = document.querySelector("#item").value;;
   let cantidadItems = document.querySelector('#cant_items').value;
-  if (cantidadItems!="") {
-    let filaShop ={
-      item: itemPedido,
-      cantidad: parseInt(cantidadItems),
-      descuento: function () {
-        if(this.cantidad >= CANTMINDESCUENTO){
-          return true;
-        };
-      },
-      subTot: function () {
-        let position = 0;
-        while ((position < array_precios.length)&&(this.item != array_precios[position].item)) {
-          position++;
-        }
-        if (filaShop.descuento()){
-          return ((cantidadItems * (1-DESCUENTOPORCENT) * (array_precios[position].precioUnit)).toFixed(2));
-        } else {
-        return (cantidadItems * (array_precios[position].precioUnit));
-        }
-      },
-    };
-    array_pedido.push(filaShop);
-    let claseFila;
-    if (filaShop.descuento()) {
-      claseFila = "resaltaFila";
-    } else {
-      claseFila = "";
+  if (this.id == 'agregaX3'){
+    repeticiones = 3;
+  }
+  for (let index = 0; index < repeticiones; index++) {
+    if (cantidadItems!="") {
+      let filaShop ={
+        item: itemPedido,
+        cantidad: parseInt(cantidadItems),
+        descuento: function () {
+          if(this.cantidad >= CANTMINDESCUENTO){
+            return true;
+          };
+        },
+        subTot: function () {
+          let position = 0;
+          while ((position < array_precios.length)&&(this.item != array_precios[position].item)) {
+            position++;
+          }
+          if (filaShop.descuento()){
+            return ((cantidadItems * (1-DESCUENTOPORCENT) * (array_precios[position].precioUnit)).toFixed(2));
+          } else {
+          return (cantidadItems * (array_precios[position].precioUnit));
+          }
+        },
+      };
+      array_pedido.push(filaShop);
+      let claseFila;
+      if (filaShop.descuento()) {
+        claseFila = "resaltaFila";
+      } else {
+        claseFila = "";
+      }
+      cuerpoTablaShop.innerHTML += `<tr class="${claseFila}"><td>${filaShop.item}</td><td>${filaShop.cantidad}</td><td>${filaShop.subTot()}</td></tr>`;
+      inputCant.value= "";
+      totalTabla.innerHTML = sumaTotal+=parseInt(filaShop.subTot());
     }
-    cuerpoTablaShop.innerHTML += `<tr class="${claseFila}"><td>${filaShop.item}</td><td>${filaShop.cantidad}</td><td>${filaShop.subTot()}</td></tr>`;
-    inputCant.value= "";
-    totalTabla.innerHTML = sumaTotal+=parseInt(filaShop.subTot());
   }
 };
 

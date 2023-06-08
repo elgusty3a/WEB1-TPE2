@@ -11,7 +11,7 @@ captcha();
 
 
 function captcha() {
-  const CANTCARACTCAPTCH = 5;
+  const CANTCARACTCAPTCH = 2;
   for (let i = 0; i < CANTCARACTCAPTCH; i++) {
     comp = comp + opcRandom();
   }
@@ -96,7 +96,7 @@ function resetearCapcha() {
 */
 
 
-let array_precios = [           /* precios de los elementos que vendo */
+let array_precios = [    /* precios de los elementos que vendo */
 {
   item: "Entrada 2D",
   precioUnit: 1000,
@@ -139,55 +139,70 @@ let array_precios = [           /* precios de los elementos que vendo */
 },
 ];
 
+
 let cuerpoTablaShop = document.querySelector('#body_table_shop');
 let botonShopPush = document.querySelector('#agrega1');
+let botonShopPushX3 = document.querySelector('#agregaX3');
 let inputCant = document.querySelector('#cant_items');
 let totalTabla = document.querySelector('#total_suma');
+
 const CANTMINDESCUENTO = 3;
 const DESCUENTOPORCENT = 0.2;
+let sumaTotal = 0;
 let array_pedido=[];
+
 botonShopPush.addEventListener("click", agregaPedido);
 
-let sumaTotal = 0;
+
+/*     este es el evento del boton x 3      */
+
+botonShopPushX3.addEventListener("click", agregaPedido);
+
+
 
 function agregaPedido(e) {
-e.preventDefault();
-console.log("estoy dentro de consola boton");
-
-let itemPedido = document.querySelector("#item").value;;
-let cantidadItems = document.querySelector('#cant_items').value;
-if (cantidadItems!="") {
-  let filaShop ={
-    item: itemPedido,
-    cantidad: parseInt(cantidadItems),
-    descuento: function () {
-      if(this.cantidad >= CANTMINDESCUENTO){
-        return true;
-      };
-    },
-    subTot: function () {
-      let position = 0;
-      while ((position < array_precios.length)&&(this.item != array_precios[position].item)) {
-        position++;
-      }
-      if (filaShop.descuento()){
-        return ((cantidadItems * (1-DESCUENTOPORCENT) * (array_precios[position].precioUnit)).toFixed(2));
-      } else {
-      return (cantidadItems * (array_precios[position].precioUnit));
-      }
-    },
-  };
-  array_pedido.push(filaShop);
-  let claseFila;
-  if (filaShop.descuento()) {
-    claseFila = "resaltaFila";
-  } else {
-    claseFila = "";
+  console.log("estoy dentro de consola boton x 3");
+  e.preventDefault();
+  let repeticiones = 1;
+  let itemPedido = document.querySelector("#item").value;;
+  let cantidadItems = document.querySelector('#cant_items').value;
+  if (this.id == 'agregaX3'){
+    repeticiones = 3;
   }
-  cuerpoTablaShop.innerHTML += `<tr class="${claseFila}"><td>${filaShop.item}</td><td>${filaShop.cantidad}</td><td>${filaShop.subTot()}</td></tr>`;
-  inputCant.value= "";
-  totalTabla.innerHTML = sumaTotal+=parseInt(filaShop.subTot());
-}
+  for (let index = 0; index < repeticiones; index++) {
+    if (cantidadItems!="") {
+      let filaShop ={
+        item: itemPedido,
+        cantidad: parseInt(cantidadItems),
+        descuento: function () {
+          if(this.cantidad >= CANTMINDESCUENTO){
+            return true;
+          };
+        },
+        subTot: function () {
+          let position = 0;
+          while ((position < array_precios.length)&&(this.item != array_precios[position].item)) {
+            position++;
+          }
+          if (filaShop.descuento()){
+            return ((cantidadItems * (1-DESCUENTOPORCENT) * (array_precios[position].precioUnit)).toFixed(2));
+          } else {
+          return (cantidadItems * (array_precios[position].precioUnit));
+          }
+        },
+      };
+      array_pedido.push(filaShop);
+      let claseFila;
+      if (filaShop.descuento()) {
+        claseFila = "resaltaFila";
+      } else {
+        claseFila = "";
+      }
+      cuerpoTablaShop.innerHTML += `<tr class="${claseFila}"><td>${filaShop.item}</td><td>${filaShop.cantidad}</td><td>${filaShop.subTot()}</td></tr>`;
+      inputCant.value= "";
+      totalTabla.innerHTML = sumaTotal+=parseInt(filaShop.subTot());
+    }
+  }
 };
 
 let botonShopPop = document.querySelector('#borraUlt').addEventListener("click", ()=>{

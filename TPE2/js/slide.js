@@ -4,7 +4,7 @@
 ! ---- comienzo del slide --------------------
 */
 
-let arregloImg = ["img0.png","img1.png","img2.png","img3.png","img4.png","img5.png","img6.png","img7.png","img8.png","img9.png","img10.png","img11.png","img12.png","img13.png"];
+let arregloImg = ["img0.jpg","img1.jpg","img2.jpg","img3.jpg","img4.jpg","img5.jpg","img6.jpg","img7.jpg","img8.jpg","img9.jpg","img10.jpg","img11.jpg","img12.jpg","img13.jpg"];
 let imgActual = 0;
 
 //setear tiempo

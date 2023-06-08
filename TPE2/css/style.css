@@ -201,7 +201,7 @@ li{
   height: 15vh;
   width: 100%;
   margin: 5px 5px;
-  background-image: url(../img/img0.png);
+  background-image: url(../img/img0.jpg);
   background-image: no-repeat;
   background-image: fixed;
   background-position: center;
@@ -702,11 +702,11 @@ li{
 	height: 100%;
 	border-radius: 10px;
 	object-fit: cover;
-  opacity: 0.5; /* TODO */
+  opacity: 0.85; /* TODO */
 }
 .captcha-area > h1{
 	position: absolute;
-	color: rgba(0, 0, 0, 1);
+	color: rgba(0, 0, 0, 0.507);
   font-weight:bold;
 	font-size: 1.5em;
 	letter-spacing: 10px;
@@ -1045,6 +1045,15 @@ footer > img{
     position: relative;
     visibility: visible;
     background: transparent;
+  }
+  .nav-links::-webkit-scrollbar{
+    height: 2px;
+    border-radius: 5px;
+    background-color: rgba(48, 102, 102, 0.82);
+  }
+  .nav-links::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: var(--navbar-shallow-color);
   }
 
   .item-nav {

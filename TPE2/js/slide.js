@@ -9,7 +9,7 @@ let imgActual = 0;
 
 //setear tiempo
 let tempo;
-tempo = setInterval(pasarImagen, 4500);
+tempo = setInterval(pasarImagen, 5000);
 
 document.querySelector('#btn-sig').addEventListener("click" , pasarImagen);
 document.querySelector('#btn-ant').addEventListener("click" , pasarImagen);
@@ -46,7 +46,7 @@ function detenerSlide() {
 }
 
 function arrancarSlide() {
-  tempo = setInterval(pasarImagen, 4500);
+  tempo = setInterval(pasarImagen, 5000);
 }
 
 /*

@@ -10,6 +10,11 @@
   --theme-cards: teal;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   /* font-family: 'Montserrat', sans-serif; */
@@ -24,26 +29,20 @@ body {
   background-blend-mode: multiply;
 }
 
-body > img{
+/* body > img{
   position: absolute;
   top: 0px;
   opacity: 0.095;
   width: 100vw;
   height: 100vh;
-  /* max-height: 1180px; */
   object-fit: cover;
   object-position: center;
   z-index: -1;
-}
+} */
 
 a {
   text-decoration: none;
   color: var(--text-color);
-}
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 li{
   list-style: none;
@@ -767,11 +766,11 @@ li{
 
 .sidebar{
   text-align: center;
-  border: 1px solid blue;
   background-color: rgb(255, 255, 255);
   grid-area: sidebar;
   border-radius: 10px;
-  width: 100vw;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .sidebar a img{
@@ -786,6 +785,7 @@ li{
 /*
 ?------------------------INICIO PIE DE PAGINA--------
 */
+
 footer{
 	background-color: rgb(27, 68, 56);
 	display: flex;
@@ -793,7 +793,8 @@ footer{
 	padding: 15px 20px;
 	align-content: center;
   grid-area: footer;
-  /* width: 100vw; */
+  width: 100vw;
+  margin: 0;
 }
 .derechos{
 	text-transform: uppercase;
@@ -833,10 +834,10 @@ footer > img{
   grid-template-columns: (4, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-  "header header header header"
+  /* "header header header header" */
   "shop shop shop shop"
   "sidebar sidebar sidebar sidebar"
-  "footer footer footer footer"
+  /* "footer footer footer footer" */
 }
 
 
@@ -939,10 +940,10 @@ footer > img{
     gap: 10px;
     grid-template-columns: (12 1fr);
     grid-template-areas:
-    "header header header header header header header header header header header header "
+    /* "header header header header header header header header header header header header " */
     "slide slide slide slide slide slide slide slide slide slide slide slide"
     "cards cards cards cards cards cards cards cards cards sidebar sidebar sidebar"
-    "footer footer footer footer footer footer footer footer footer footer footer footer";
+    /* "footer footer footer footer footer footer footer footer footer footer footer footer"; */
   }
   .sectionGridReg{
     width: 97%;
@@ -953,9 +954,9 @@ footer > img{
     grid-template-columns: (4, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-    "header header header header"
+    /* "header header header header" */
     "shop shop shop sidebar"
-    "footer footer footer footer"
+    /* "footer footer footer footer" */
   }
   #formShop{
     width: 40%;

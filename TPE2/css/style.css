@@ -1111,6 +1111,13 @@ footer > img{
     visibility: visible;
     background: transparent;
   }
+
+  .nav-links > li > a:hover {
+    background-color: #b83434;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
   .nav-links::-webkit-scrollbar{
     height: 4px;
     border-radius: 5px;

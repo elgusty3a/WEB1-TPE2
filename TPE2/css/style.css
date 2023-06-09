@@ -860,7 +860,7 @@ footer > img{
 .sectionGridReg,
 .sectionGrid{
   width: 100vw;
-  margin-top: 100px; /* para mostrar cuarpo del grid por debajo del header fixed */
+  margin-top: 110px; /* para mostrar cuarpo del grid por debajo del header fixed */
   gap: 10px;
   grid-template-columns: (4, 1fr);
   grid-template-rows: auto;

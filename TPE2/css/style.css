@@ -188,7 +188,7 @@ li{
 
 .slide{
   overflow: hidden;
-  height: 15vh;
+  height: 20vh;
   width: 100%;
   margin: 5px 5px;
   background-image: url(../img/img0.jpg);
@@ -924,7 +924,7 @@ footer > img{
     width: 120px;
   }
   .slide{
-    height: 35vh;
+    height: 50vh;
     margin: 0 20px;
   }
   .poster{
@@ -1005,9 +1005,11 @@ footer > img{
     object-fit: cover;
   }
 
+
   .horarios_salas{
     margin-left: 15px;
   }
+
 
   .news{
     display: flex;
@@ -1152,16 +1154,72 @@ footer > img{
     padding: 0 20px 15px 20px;
   }
   .slide{
-    height: 50vh;
-    max-height: 240px;
+    height: 55vh;
     margin: 0 20px;
   }
+
+
+
+
+
+  .poster{
+    display: flex;
+    justify-content: center;
+    max-width: 250px;
+    width: 65%;
+    min-height: 200px;
+  }
+  .portada-img{
+    min-height: 100px;
+    width: 50%;
+    max-width: 200px;
+  }
+  .cards-conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: start;
+  }
+  .movie{
+    margin: 0 10px;
+    margin-bottom: 15px;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 380px;
+  }
+  .sinop-parr>p{
+    margin: auto;
+    font-size: 1em;
+    max-width: 200px;
+    height: 300px;
+    padding: 15px;
+  }
+  .parr-der{
+    margin-top: 0px;
+  }
+  .parr-der>ul{
+    top: 10px;
+    height: 120px;
+  }
+  .parr-der>ul li{
+    margin: auto;
+    font-size: .8rem;
+    padding: 0 0 5px 10%;
+  }
+
+
+
+
+
+
+
 
   #form > input{
     font-size: 1.2em;
   }
   .captcha-area{
-    height: 40px;
+    height: 70px;
+    width: 50%;
   }
   .captcha-area > h1{
     font-size: 2.3em;

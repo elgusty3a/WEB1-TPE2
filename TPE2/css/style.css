@@ -67,14 +67,15 @@ li{
   display: flex;
   flex-direction: column ;
   align-items: center;
-  font-size: 18px;
+  font-size: 0.6em;
   font-weight: 500;
   margin: auto;
-  color: var(--primary-color);
+  color: var(--secundary-color);
 }
 
 .logo img {
   border-radius: 40%;
+  margin-bottom: 10px;
   width: 100px;
 }
 
@@ -290,6 +291,7 @@ li{
 .parr-der ul {
   overflow-y: scroll;
   height: 90px;
+  padding-right: 5px;
 }
 .parr-der ul::-webkit-scrollbar{
   width: 4px;
@@ -759,6 +761,62 @@ li{
   object-fit: cover;
 }
 
+/*
+!--------------------INICIO DE NOTICIAS-----------
+*/
+
+.news-conteiner{
+  width: 95%;
+  margin: auto;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: news;
+}
+.news{
+  border-radius: 15px;
+  background-color: #ecd083d3;
+  margin-bottom: 10px;
+}
+.portada-img-news{ /* ?news.html */
+  margin: 20px 25% 20px 25%;
+	border-radius: 10px;
+	width:50%;
+}
+
+.parr-izq-news > h3{
+  font-size: 1em;
+	color: rgb(15, 63, 63);
+	text-align: center;
+	text-shadow: 0.5em 0.5em 1em rgb(141, 48, 25), 0 0 1em rgb(226, 19, 19), 0 0 0.2em rgb(55, 226, 33);
+}
+.parr-izq-news > .destacado,
+.parr-der-news > .destacado{ /* ?news.html */
+	background-color: rgb(209, 209, 255);
+	margin: 10px;
+	padding: 20px;
+	border-radius: 10px;
+	border: 1px solid black;
+	font-style: oblique;
+	font-size: 0.9em;
+	color: rgb(15, 63, 63);
+}
+.news > p::first-letter {
+	font-size: 200%
+}
+
+.parr-izq-news,
+.parr-der-news{
+  font-size: 0.8em;
+  color: var(--text-color);
+  padding: 15px 15px;
+  text-align: justify;
+  align-items: center;
+}
+
+
+
 
 /*
 ?------------------------INICIO PIE DE PAGINA--------
@@ -797,7 +855,7 @@ footer > img{
 	height: 20px;
 }
 
-
+.sectionGridNews,
 .sectionGridHorarios,
 .sectionGridReg,
 .sectionGrid{
@@ -822,11 +880,17 @@ footer > img{
   "sidebar sidebar sidebar sidebar"
   "footer footer footer footer"
 }
-
 .sectionGridHorarios{
   grid-template-areas:
   "slider slider slider slider"
   "horarios horarios horarios horarios"
+  "sidebar sidebar sidebar sidebar"
+  "footer footer footer footer"
+}
+.sectionGridNews{
+  grid-template-areas:
+  "slider slider slider slider"
+  "news news news news"
   "sidebar sidebar sidebar sidebar"
   "footer footer footer footer"
 }
@@ -945,7 +1009,21 @@ footer > img{
     margin-left: 15px;
   }
 
-
+  .news{
+    display: flex;
+    width: 100%;
+  }
+  .parr-izq-news > h3{
+    font-size: 1.3em;
+  }
+  .parr-der-news,
+  .parr-izq-news{
+    width: 50%;
+  }
+  .parr-der-news>p,
+  .parr-izq-news>p{
+    font-size: 0.93em;
+  }
   footer{
     padding: 15px 20px;
   }
@@ -966,13 +1044,16 @@ footer > img{
 
   .sectionGrid,
   .sectionGridHorarios,
-  .sectionGridReg{
+  .sectionGridReg,
+  .sectionGridNews{
     width: 100%;
     margin: auto;
     margin-top: 115px; /* para mostrar cuarpo del grid por debajo del header fixed */
     display: grid;
     gap: 10px;
     grid-template-columns: (12 1fr);
+  }
+  .sectionGrid{
     grid-template-areas:
     "slide slide slide slide slide slide slide slide slide slide slide slide"
     "cards cards cards cards cards cards cards cards cards sidebar sidebar sidebar"
@@ -990,6 +1071,12 @@ footer > img{
     grid-template-areas:
     "slide slide slide slide slide slide slide slide slide slide slide slide"
     "horarios horarios horarios horarios horarios horarios horarios horarios horarios horarios horarios sidebar"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+  .sectionGridNews{
+    grid-template-areas:
+    "slide slide slide slide slide slide slide slide slide slide slide slide"
+    "news news news news news news news news news news news sidebar"
     "footer footer footer footer footer footer footer footer footer footer footer footer";
   }
 
@@ -1056,13 +1143,13 @@ footer > img{
     display: none;
   }
   .logo img{
-    margin:  0 50px;
+    margin:  0 50px 5px 50px;
     transition: 0.5s;
   }
 
 
   .slide-conteiner{
-    padding: 0 20px;
+    padding: 0 20px 15px 20px;
   }
   .slide{
     height: 50vh;
@@ -1070,7 +1157,9 @@ footer > img{
     margin: 0 20px;
   }
 
-
+  #form > input{
+    font-size: 1.2em;
+  }
   .captcha-area{
     height: 40px;
   }
@@ -1084,8 +1173,10 @@ footer > img{
   .form_shop{
     justify-content: center;
   }
+
   .sectionGrid,
   .sectionGridReg,
+  .sectionGridNews,
   .sectionGridHorarios{
     margin-top: 125px;
     gap: 10px;

@@ -290,6 +290,7 @@ li{
 .parr-der ul {
   overflow-y: scroll;
   height: 90px;
+  padding-right: 5px;
 }
 .parr-der ul::-webkit-scrollbar{
   width: 4px;

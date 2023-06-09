@@ -534,7 +534,7 @@ li{
 .form_shop{
   grid-area: shop;
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 #section_shop{
   height: max-content;
@@ -685,7 +685,7 @@ li{
 }
 .captcha-area > h1{
 	position: absolute;
-	color: rgba(0, 0, 0, 0.507);
+	color: rgba(0, 0, 0, 0.55);
   font-weight:bold;
 	font-size: 1.5em;
 	letter-spacing: 10px;
@@ -1286,7 +1286,8 @@ footer > img{
 	width: 50%;
 	height: 60px;
 }
-
+.captcha-area > h1{
+	font-size: 3em;
 
 
 .prueba{

@@ -11,7 +11,7 @@ captcha();
 
 
 function captcha() {
-  const CANTCARACTCAPTCH = 2;
+  const CANTCARACTCAPTCH = 5;
   for (let i = 0; i < CANTCARACTCAPTCH; i++) {
     comp = comp + opcRandom();
   }

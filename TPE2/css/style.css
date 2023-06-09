@@ -29,17 +29,6 @@ body {
   background-blend-mode: multiply;
 }
 
-/* body > img{
-  position: absolute;
-  top: 0px;
-  opacity: 0.095;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  object-position: center;
-  z-index: -1;
-} */
-
 a {
   text-decoration: none;
   color: var(--text-color);
@@ -319,7 +308,6 @@ li{
   border-radius: 40px;
   border: 2px solid wheat;
   width: max-content;
-  /* margin: 10px auto; */
   cursor: pointer;
   color: wheat;
   padding: 5px;
@@ -396,8 +384,9 @@ li{
   align-items: center;
   width: 90%;
   padding-right: 5px;
-  /* overflow-x: scroll; */
-  overflow: scroll;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  overflow-x: scroll;
 }
 .tabla_cartelera {
 	text-transform: uppercase;
@@ -578,14 +567,6 @@ li{
   margin: 0 10%;
 }
 
-.sectionGridHorarios{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 95%;
-  margin: auto;
-  margin-top: 100px; /* para mostrar cuarpo del grid por debajo del header fixed */
-}
 
 
 
@@ -796,20 +777,20 @@ footer{
 .derechos{
 	text-transform: uppercase;
 	color: rgb(250, 141, 101);
-  font-size: 0.55em;
+  font-size: 0.5em;
   padding:  0 10px 0 0;
 }
 footer > img{
 	position: relative;
 	opacity: 0.8;
 	z-index: 1;
-  height: 40px;
+  height: 35px;
 }
 .social2{
 	text-align: center;
 	text-transform: uppercase;
 	color: rgb(250, 141, 101);
-  font-size: 0.5em;
+  font-size: 0.45em;
   padding:  0 0 0 10px;
 }
 .img-social2{
@@ -817,39 +798,38 @@ footer > img{
 }
 
 
-
-
-
-
-
-
-.sectionGridReg{
+.sectionGridHorarios,
+.sectionGridReg,
+.sectionGrid{
   width: 100vw;
-  margin-top: 130px; /* para mostrar cuarpo del grid por debajo del header fixed */
+  margin-top: 100px; /* para mostrar cuarpo del grid por debajo del header fixed */
   gap: 10px;
   grid-template-columns: (4, 1fr);
   grid-template-rows: auto;
+}
+
+.sectionGridReg{
   grid-template-areas:
+  "slider slider slider slider"
   "shop shop shop shop"
   "sidebar sidebar sidebar sidebar"
   "footer footer footer footer"
 }
 .sectionGrid{
-  width: 100vw;
-  /* margin: auto; */
-  margin-top: 100px; /* para mostrar cuarpo del grid por debajo del header fixed */
-  gap: 10px;
-  grid-template-columns: (4, 1fr);
-  grid-template-rows: auto;
   grid-template-areas:
-  /* "header header header header" */
-  "shop shop shop shop"
+  "slider slider slider slider"
+  "cards cards cards cards"
   "sidebar sidebar sidebar sidebar"
   "footer footer footer footer"
 }
 
-
-
+.sectionGridHorarios{
+  grid-template-areas:
+  "slider slider slider slider"
+  "horarios horarios horarios horarios"
+  "sidebar sidebar sidebar sidebar"
+  "footer footer footer footer"
+}
 
 
 
@@ -940,32 +920,7 @@ footer > img{
     font-size: 2em;
   }
 
-  .sectionGrid{
-    width: 100%;
-    margin: auto;
-    margin-top: 105px; /* para mostrar cuarpo del grid por debajo del header fixed */
-    display: grid;
-    gap: 10px;
-    grid-template-columns: (12 1fr);
-    grid-template-areas:
-    /* "header header header header header header header header header header header header " */
-    "slide slide slide slide slide slide slide slide slide slide slide slide"
-    "cards cards cards cards cards cards cards cards cards sidebar sidebar sidebar"
-    "footer footer footer footer footer footer footer footer footer footer footer footer";
-  }
-  .sectionGridReg{
-    width: 100%;
-    margin: auto;
-    margin-top: 125px; /* para mostrar cuarpo del grid por debajo del header fixed */
-    display: grid;
-    gap: 10px;
-    grid-template-columns: (4, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-    /* "header header header header" */
-    "shop shop shop sidebar"
-    "footer footer footer footer"
-  }
+  
   #formShop{
     width: 40%;
   }
@@ -976,7 +931,7 @@ footer > img{
     display: flex;
     flex-direction: column;
     width: auto;
-    margin-right: auto;
+    margin-right: 0;
   }
   .sidebar a img{
     width: 150px;
@@ -986,21 +941,9 @@ footer > img{
     object-fit: cover;
   }
 
-  .sectionGridHorarios{
-    width: 100%;
-    margin: auto;
-    margin-top: 105px;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: (4, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-    /* "header header header header" */
-    "slide slide slide slide"
-    "horarios horarios horarios sidebar"
-    "footer footer footer footer"
+  .horarios_salas{
+    margin-left: 15px;
   }
-
 
 
   footer{
@@ -1021,8 +964,34 @@ footer > img{
     height: 30px;
   }
 
+  .sectionGrid,
+  .sectionGridHorarios,
+  .sectionGridReg{
+    width: 100%;
+    margin: auto;
+    margin-top: 115px; /* para mostrar cuarpo del grid por debajo del header fixed */
+    display: grid;
+    gap: 10px;
+    grid-template-columns: (12 1fr);
+    grid-template-areas:
+    "slide slide slide slide slide slide slide slide slide slide slide slide"
+    "cards cards cards cards cards cards cards cards cards sidebar sidebar sidebar"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+  .sectionGridReg{
+    grid-template-areas:
+    "slide slide slide slide slide slide slide slide slide slide slide slide"
+    "shop shop shop shop shop shop shop shop shop shop shop sidebar"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
 
-
+  .sectionGridHorarios{
+    align-items: start;
+    grid-template-areas:
+    "slide slide slide slide slide slide slide slide slide slide slide slide"
+    "horarios horarios horarios horarios horarios horarios horarios horarios horarios horarios horarios sidebar"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
 
 
 
@@ -1092,8 +1061,6 @@ footer > img{
   }
 
 
-
-
   .slide-conteiner{
     padding: 0 20px;
   }
@@ -1102,8 +1069,6 @@ footer > img{
     max-height: 240px;
     margin: 0 20px;
   }
-
-
 
 
   .captcha-area{
@@ -1117,18 +1082,15 @@ footer > img{
     font-size: 1em;
   }
   .form_shop{
-    /* display: flex; */
     justify-content: center;
   }
-  .sectionGridReg{
-    margin-top: 115px;
-    gap: 10px;
-
-  }
+  .sectionGrid,
+  .sectionGridReg,
   .sectionGridHorarios{
-    margin-top: 105px;
+    margin-top: 125px;
     gap: 10px;
   }
+
 
 
 

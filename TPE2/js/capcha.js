@@ -60,7 +60,8 @@ function verificarcap(e){ //funcion de verificacion y comparacion
     boton.classList.add('greencapcha');
     let formularioRegHidden = document.querySelector('#registro_section').classList.toggle('ocultaRegistro');
     let sectionShop = document.querySelector('#section_shop').classList.toggle('muestraRegistro');
-    document.querySelector('#saludo_usuario').innerHTML = `Bienvenid@ ${document.querySelector('#name_user').value}`;
+    document.querySelector('#saludo_usuario').innerHTML = `Hola ${document.querySelector('#name_user').value}`;
+    document.querySelector('#user_log_in').innerHTML = `<img src="img/smile-svgrepo-com.svg">`;
   }else{
     boton.value=("INCORRECTO!!");
     verif.classList.add('redcapcha');
@@ -170,7 +171,7 @@ function agregaPedido(e) {
     repeticiones = 3;
   }
   for (let index = 0; index < repeticiones; index++) {
-    if (cantidadItems!="") {
+    if ((cantidadItems!="")&&(cantidadItems>0)) {
       let filaShop ={
         item: itemPedido,
         cantidad: parseInt(cantidadItems),

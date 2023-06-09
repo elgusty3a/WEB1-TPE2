@@ -552,6 +552,7 @@ li{
 .form_shop{
   grid-area: shop;
   position: relative;
+  margin-bottom: 60px;
 }
 #section_shop{
   height: max-content;
@@ -584,7 +585,6 @@ li{
   width: 95%;
   margin: auto;
   margin-top: 100px; /* para mostrar cuarpo del grid por debajo del header fixed */
-
 }
 
 
@@ -613,8 +613,10 @@ li{
 }
 .registro > h1{
   text-transform: uppercase;
+  text-align: center;
 	color: rgb(182, 156, 182);
-  font-size: 1em;
+  font-size: 1.5em;
+  margin-bottom: 30px;
 }
 #form{
 	display: flex;
@@ -821,9 +823,20 @@ footer > img{
 
 
 
+.sectionGridReg{
+  width: 100vw;
+  margin-top: 130px; /* para mostrar cuarpo del grid por debajo del header fixed */
+  gap: 10px;
+  grid-template-columns: (4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+  "shop shop shop shop"
+  "sidebar sidebar sidebar sidebar"
+  "footer footer footer footer"
+}
 .sectionGrid{
-  width: 95%;
-  margin: auto;
+  width: 100vw;
+  /* margin: auto; */
   margin-top: 100px; /* para mostrar cuarpo del grid por debajo del header fixed */
   gap: 10px;
   grid-template-columns: (4, 1fr);
@@ -832,7 +845,7 @@ footer > img{
   /* "header header header header" */
   "shop shop shop shop"
   "sidebar sidebar sidebar sidebar"
-  /* "footer footer footer footer" */
+  "footer footer footer footer"
 }
 
 
@@ -928,7 +941,7 @@ footer > img{
   }
 
   .sectionGrid{
-    width: 97%;
+    width: 100%;
     margin: auto;
     margin-top: 105px; /* para mostrar cuarpo del grid por debajo del header fixed */
     display: grid;
@@ -938,10 +951,10 @@ footer > img{
     /* "header header header header header header header header header header header header " */
     "slide slide slide slide slide slide slide slide slide slide slide slide"
     "cards cards cards cards cards cards cards cards cards sidebar sidebar sidebar"
-    /* "footer footer footer footer footer footer footer footer footer footer footer footer"; */
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
   }
   .sectionGridReg{
-    width: 97%;
+    width: 100%;
     margin: auto;
     margin-top: 125px; /* para mostrar cuarpo del grid por debajo del header fixed */
     display: grid;
@@ -951,7 +964,7 @@ footer > img{
     grid-template-areas:
     /* "header header header header" */
     "shop shop shop sidebar"
-    /* "footer footer footer footer" */
+    "footer footer footer footer"
   }
   #formShop{
     width: 40%;
@@ -963,6 +976,7 @@ footer > img{
     display: flex;
     flex-direction: column;
     width: auto;
+    margin-right: auto;
   }
   .sidebar a img{
     width: 150px;
@@ -973,7 +987,7 @@ footer > img{
   }
 
   .sectionGridHorarios{
-    width: 95%;
+    width: 100%;
     margin: auto;
     margin-top: 105px;
     display: grid;
@@ -981,7 +995,7 @@ footer > img{
     grid-template-columns: (4, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-    "header header header header"
+    /* "header header header header" */
     "slide slide slide slide"
     "horarios horarios horarios sidebar"
     "footer footer footer footer"
@@ -1046,6 +1060,15 @@ footer > img{
     visibility: visible;
     background: transparent;
   }
+  .nav-links::-webkit-scrollbar{
+    width: 4px;
+    border-radius: 5px;
+    background-color: rgba(48, 102, 102, 0.82);
+  }
+  .nav-links::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: var(--navbar-shallow-color);
+  }
 
   .item-nav {
     padding: 0 5px;
@@ -1083,9 +1106,6 @@ footer > img{
 
 
 
-
-
-
   .captcha-area{
     height: 40px;
   }
@@ -1102,12 +1122,15 @@ footer > img{
   }
   .sectionGridReg{
     margin-top: 115px;
-    width: 90%;
+    gap: 10px;
+
   }
   .sectionGridHorarios{
     margin-top: 105px;
-    width: 90%;
+    gap: 10px;
   }
+
+
 
 
 

@@ -421,7 +421,7 @@ li{
 	text-transform: capitalize;
 }
 .horarios_salas::-webkit-scrollbar{
-  width: 4px;
+  height: 4px;
   border-radius: 5px;
   background-color: rgba(48, 102, 102, 0.82);
 }
@@ -1030,7 +1030,7 @@ footer > img{
     background: transparent;
   }
   .nav-links::-webkit-scrollbar{
-    width: 4px;
+    height: 4px;
     border-radius: 5px;
     background-color: rgba(48, 102, 102, 0.82);
   }

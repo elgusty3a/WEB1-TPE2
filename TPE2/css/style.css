@@ -1,13 +1,16 @@
 :root {
   --theme-color: rgb(9, 12, 9);
-  --primary-color: #124f88;
-  --secundary-color: #F7C331;
-  --text-color-inverse: white;
   --text-color: black;
+  --text-color-inverse: white;
   --navbar-background-color-hero: rgb(31, 51, 39);
   --navbar-shallow-color: #b83434;
   --menu-mobile-background-color: #b83434;/*#3A4460;*/
+  --frase-nav-color: #F7C331;
   --theme-cards: teal;
+  --theme-color-scrollbar: rgba(48, 102, 102, 0.82);
+  --color-parrafos-news: rgb(15, 63, 63);
+  --color-text-footer: rgb(250, 141, 101);
+  --background-color-news: #ecd083d3;
 }
 
 *{
@@ -17,8 +20,6 @@
 }
 
 body {
-  /* font-family: 'Montserrat', sans-serif; */
-  /* background-color: var(--theme-color); */
   background-color: #0f5f6d;
   color: var(--text-color);
   background-image: url(../img/antigua-máquina-de-cine.jpg);
@@ -83,7 +84,6 @@ li{
 .nav-links {
   display: flex;
   flex-direction: column;
-  /* list-style: none; */
   position: fixed;
   left: 0;
   top: 0;
@@ -182,7 +182,6 @@ li{
   text-align: center;
   width: 100%;
   display: flex;
-  /* background-color: cyan; */
   grid-area: slide;
 }
 
@@ -295,7 +294,7 @@ li{
 .parr-der ul::-webkit-scrollbar{
   width: 4px;
   border-radius: 5px;
-  background-color: rgba(48, 102, 102, 0.82);
+  background-color: var(--theme-color-scrollbar);
 }
 .parr-der ul::-webkit-scrollbar-thumb{
   border-radius: 5px;
@@ -363,7 +362,7 @@ li{
 .sinop-parr::-webkit-scrollbar{
   width: 4px;
   border-radius: 5px;
-  background-color: rgba(48, 102, 102, 0.82);
+  background-color: var(--theme-color-scrollbar);
 }
 .sinop-parr::-webkit-scrollbar-thumb{
   border-radius: 5px;
@@ -424,7 +423,7 @@ li{
 .horarios_salas::-webkit-scrollbar{
   height: 4px;
   border-radius: 5px;
-  background-color: rgba(48, 102, 102, 0.82);
+  background-color: var(--theme-color-scrollbar);
 }
 .horarios_salas::-webkit-scrollbar-thumb{
   border-radius: 5px;
@@ -663,7 +662,7 @@ li{
 	text-align: center;
 	margin: 3px;
 	font-size: 1.5em;
-	color: rgb(0, 0, 0);
+	color: var(--text-color);
 }
 .captcha-area{
 	width: 80%;
@@ -680,15 +679,16 @@ li{
 	height: 100%;
 	border-radius: 10px;
 	object-fit: cover;
-  opacity: 0.85; /* TODO */
+  opacity: 0.95; /* TODO */
 }
 .captcha-area > h1{
 	position: absolute;
-	color: rgba(0, 0, 0, 0.55);
+	color: var(--text-color);
+  opacity: 0.6; /* TODO */
   font-weight:bold;
 	font-size: 1.5em;
 	letter-spacing: 10px;
-  /* pointer-events: none; */
+  pointer-events: none;
 }
 
 .prueba{
@@ -769,7 +769,7 @@ li{
 }
 .news{
   border-radius: 15px;
-  background-color: #ecd083d3;
+  background-color: var(--background-color-news);
   margin-bottom: 10px;
 }
 .portada-img-news{ /* ?news.html */
@@ -780,7 +780,7 @@ li{
 
 .parr-izq-news > h3{
   font-size: 1em;
-	color: rgb(15, 63, 63);
+	color: var(--color-parrafos-news);
 	text-align: center;
 	text-shadow: 0.5em 0.5em 1em rgb(141, 48, 25), 0 0 1em rgb(226, 19, 19), 0 0 0.2em rgb(55, 226, 33);
 }
@@ -793,7 +793,7 @@ li{
 	border: 1px solid black;
 	font-style: oblique;
 	font-size: 0.9em;
-	color: rgb(15, 63, 63);
+	color: var(--color-parrafos-news);
 }
 .news > p::first-letter {
 	font-size: 200%
@@ -816,7 +816,7 @@ li{
 */
 
 footer{
-	background-color: rgb(27, 68, 56);
+	background-color: var(--navbar-background-color-hero);
 	display: flex;
 	justify-content: space-between;
 	padding: 15px 20px;
@@ -827,7 +827,7 @@ footer{
 }
 .derechos{
 	text-transform: uppercase;
-	color: rgb(250, 141, 101);
+	color: var(--color-text-footer);
   font-size: 0.5em;
   padding:  0 10px 0 0;
 }
@@ -840,7 +840,7 @@ footer > img{
 .social2{
 	text-align: center;
 	text-transform: uppercase;
-	color: rgb(250, 141, 101);
+	color: var(--color-text-footer);
   font-size: 0.45em;
   padding:  0 0 0 10px;
 }
@@ -958,7 +958,7 @@ footer > img{
   .sinop-parr>p::-webkit-scrollbar{
     width: 4px;
     border-radius: 5px;
-    background-color: rgba(48, 102, 102, 0.82);
+    background-color: var(--theme-color-scrollbar);
   }
   .sinop-parr>p::-webkit-scrollbar-thumb{
     border-radius: 5px;
@@ -1019,6 +1019,9 @@ footer > img{
   .parr-izq-news>p{
     font-size: 0.93em;
   }
+
+
+
   footer{
     padding: 15px 20px;
   }
@@ -1121,7 +1124,7 @@ footer > img{
   .nav-links::-webkit-scrollbar{
     height: 4px;
     border-radius: 5px;
-    background-color: rgba(48, 102, 102, 0.82);
+    background-color: var(--theme-color-scrollbar);
   }
   .nav-links::-webkit-scrollbar-thumb{
     border-radius: 5px;
@@ -1310,6 +1313,22 @@ footer > img{
 	padding-bottom: 2px;
 	text-transform: uppercase;
 }
+
+
+/*---------------------------*/
+
+
+.parr-izq-news > h3{
+  font-size: 1.6em;
+}
+
+.parr-der-news>p,
+.parr-izq-news>p{
+  font-size: 1.1em;
+}
+
+
+
 
   .sectionGrid,
   .sectionGridReg,

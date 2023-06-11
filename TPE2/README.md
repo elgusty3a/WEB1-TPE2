@@ -36,20 +36,20 @@ El presente informe desea dar a conocer los aspectos de la pagina que se present
 
 
 
-* Vista previa de pagina e inicio para dispositivos móviles (imagenes tomadas desde Moto G5 plus).
+* Vista previa de pagina de inicio para dispositivos móviles (imagenes tomadas desde Moto G5 plus).
 
 <p align=center>
 <img src="screenshots\first-mobile.jpg" alt="vista para moviles">
 </p>
 
 
-* Vista previa de pagina e inicio para dispositivos móviles inclinados o dispositivos de un ancho de pantalla mayor a 480px (imagenes tomadas desde Moto G5 plus).
+* Vista previa de pagina de inicio para dispositivos móviles visto en poisición horizontal o dispositivos de un ancho de pantalla mayor a 480px (imagenes tomadas desde Moto G5 plus).
 
 <p align=center>
 <img src="screenshots/break-min-width480px.jpg" alt="vista mayor a 480px">
 </p>
 
-* Vista previa de pagina e inicio para escritorio.
+* Vista previa de pagina de inicio para escritorio.
 
 <p align=center>
 <img src="screenshots/desktopOpera.jpg" alt="vista escritorio">

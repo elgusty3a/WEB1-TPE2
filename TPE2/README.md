@@ -1,9 +1,9 @@
-[//]: ![](screenshots/LogoExactas.png)
+[//]: ![](img/LogoExactas.png)
 
 <div>
 
 <p align=center>
-<img src="screenshots/LogoExactas.png" alt="logo-exactas">
+<img src="img/LogoExactas.png" alt="logo-exactas">
 </p>
 
 

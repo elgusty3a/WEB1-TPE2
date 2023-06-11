@@ -71,7 +71,7 @@ li{
   font-size: 0.6em;
   font-weight: 500;
   margin: auto;
-  color: var(--secundary-color);
+  color: var(--frase-nav-color);
 }
 
 .logo img {

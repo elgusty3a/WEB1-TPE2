@@ -52,5 +52,5 @@ El presente informe desea dar a conocer los aspectos de la pagina que se present
 * Vista previa de pagina e inicio para escritorio.
 
 <p align=center>
-<img src="screenshots/desktop.jpg" alt="vista escritorio">
+<img src="screenshots/desktopOpera.jpg" alt="vista escritorio">
 </p>

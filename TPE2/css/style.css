@@ -19,6 +19,17 @@
   box-sizing: border-box;
 }
 
+body::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: var(--theme-color-scrollbar);
+}
+body::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color: var(--frase-nav-color);
+}
+
 body {
   background-color: #0f5f6d;
   color: var(--text-color);
@@ -214,9 +225,11 @@ li{
 }
 #btn-ant>img{
   rotate: 90deg;
+  margin-left: 5px;
 }
 #btn-sig>img{
   rotate: -90deg;
+  margin-right: 5px;
 }
 .img-slide{
   width: 100%;

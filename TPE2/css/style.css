@@ -1344,6 +1344,36 @@ footer > img{
 }
 
 
+
+
+
+/*
+*---------Tabla de cartelera------------------
+*/
+
+.horarios_salas{
+  padding-left: 5%;
+}
+.tabla_cartelera {
+	font-size: 1.2em;
+}
+
+.tabla_cartelera > thead{
+	font-size: 1.5em;
+}
+
+
+.horarios_salas::-webkit-scrollbar{
+  background-color: var(--theme-color-scrollbar);
+}
+.horarios_salas::-webkit-scrollbar-thumb{
+  background-color: var(--navbar-shallow-color);
+}
+
+/*
+*-------------Fin tabla cartelera-------------
+*/
+
   .sectionGrid,
   .sectionGridReg,
   .sectionGridNews,

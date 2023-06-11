@@ -319,7 +319,10 @@ li{
 
 }
 .sinop-parr>button:hover{
-  opacity: 0.8;
+  border: 3px solid var(--text-color);
+  background-color: var(--frase-nav-color);
+  color: var(--text-color);
+  font-weight: bolder;
   transition:  opacity .5s;
 }
 
@@ -1170,7 +1173,8 @@ footer > img{
     justify-content: center;
     max-width: 250px;
     width: 65%;
-    min-height: 200px;
+    min-height: 230px;
+
   }
   .portada-img{
     min-height: 100px;
@@ -1188,28 +1192,40 @@ footer > img{
     margin-bottom: 15px;
     min-width: 250px;
     max-width: 300px;
-    min-height: 380px;
+    min-height: 440px;
+  }
+  .sinop-parr{
+    margin-top: 5px;
   }
   .sinop-parr>p{
     margin: auto;
-    font-size: 1em;
+    font-size: 1.2em;
     max-width: 200px;
-    height: 300px;
+    height: 350px;
     padding: 15px;
   }
   .parr-der{
-    margin-top: 0px;
+    margin-top: 10px;
   }
   .parr-der>ul{
     top: 10px;
-    height: 120px;
+    height: 130px;
   }
   .parr-der>ul li{
     margin: auto;
     font-size: .8rem;
     padding: 0 0 5px 10%;
   }
+  .sinop-parr>button{
+    position: absolute;
+    left: 30%;
+    width: 40%;
+    bottom: 38%;
+  }
 
+  .btn-vermas{
+    font-size: 1em;
+  }
 
 
 /*
@@ -1326,8 +1342,6 @@ footer > img{
 .parr-izq-news>p{
   font-size: 1.1em;
 }
-
-
 
 
   .sectionGrid,

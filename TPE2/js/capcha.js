@@ -84,7 +84,7 @@ function resetearCapcha() {
 
 //----------------------------------------------------
 
-//----------------esaparecer el formulario
+//----------------desaparecer el formulario
 //----------------y aparecer el shop
 
 

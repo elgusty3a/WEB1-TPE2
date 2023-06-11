@@ -1,9 +1,9 @@
-[//]: ![](/Ingreso/Practica%20codigo/js-ingreso-main/LogoExactas.png)
+[//]: ![](screenshots/LogoExactas.png)
 
 <div>
 
 <p align=center>
-<img src="/Ingreso/Practica%20codigo/js-ingreso-main/LogoExactas.png" alt="logo-exactas">
+<img src="screenshots/LogoExactas.png" alt="logo-exactas">
 </p>
 
 
@@ -34,22 +34,23 @@ El presente informe desea dar a conocer los aspectos de la pagina que se present
 
 ### Screenshots
 
-El perfil del egresado incluye los siguientes rasgos distintivos:
 
-* Trabajo en equipo, asumiendo las tareas y responsabilidades dentro de un grupo,
+
+* Vista previa de pagina e inicio para dispositivos móviles.
 
 <p align=center>
-<img src="TPE2/screenshots/break-min-width480px.jpg" alt="logo-exactas">
+<img src="screenshots\first-mobile.jpg" alt="vista para moviles">
 </p>
 
-* Formación integral, entendiendo los conceptos teóricos dentro del análisis de casos reales,
+
+* Vista previa de pagina e inicio para dispositivos móviles inclinados o dispositivos de un ancho de pantalla mayor a 480px.
 
 <p align=center>
-<img src="screenshots/desktop.jpg" alt="logo-exactas">
+<img src="screenshots/break-min-width480px.jpg" alt="vista mayor a 480px">
 </p>
 
-* Capacidad para discutir ideas y alternativas para la solución de problemas,
+* Vista previa de pagina e inicio para escritorio.
 
 <p align=center>
-<img src="screenshots/break-min-width480px.jpg" alt="logo-exactas">
+<img src="screenshots/desktop.jpg" alt="vista escritorio">
 </p>

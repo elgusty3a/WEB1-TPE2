@@ -935,6 +935,7 @@ footer > img{
   }
   .slide{
     height: 50vh;
+    max-height: 130px;
     margin: 0 20px;
   }
   .poster{

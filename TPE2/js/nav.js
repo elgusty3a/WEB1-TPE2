@@ -28,10 +28,12 @@ for (let i = 0; i < btnVerMas.length; i++) {
     verParrafo.classList.toggle("ver_contenido");
     if (verParrafo.classList.contains("ver_contenido")){
       this.innerHTML="ver menos";
-      this.style.cssText ="bottom :5%; z-index: 2;"
+      this.classList.add("mover-btn-ver-down")
+      this.classList.remove("mover-btn-ver-up")
     } else {
       this.innerHTML="ver mas";
-      this.style.bottom = "38%";
+      this.classList.add("mover-btn-ver-up")
+      this.classList.remove("mover-btn-ver-down")
     };
   });
 }

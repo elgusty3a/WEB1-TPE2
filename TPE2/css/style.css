@@ -59,6 +59,16 @@ li{
   width: 100%;
   background-color: var(--theme-color);
   box-shadow: 0 4px 5px var(--navbar-shallow-color);
+  text-align: center;
+  grid-area: header;
+  z-index: 10;
+  background-image: url(../img/soñar-con-peliculas.jpg);
+	background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	background-blend-mode: multiply;
+	background-color: rgba(35, 51, 36, .9);
+	border-bottom: 3px solid rgb(179, 40, 40)
 }
 
 .nav {
@@ -111,7 +121,6 @@ li{
   background-attachment: fixed;
   background-blend-mode: multiply;
   overflow-y: auto;
-  transition: opacity 0.3s;
   visibility: hidden;
 }
 
@@ -172,19 +181,6 @@ li{
 
 /*-------------inicio del cuerpo con grid areas--------------*/
 
-
-.hero{
-  text-align: center;
-  grid-area: header;
-  z-index: 10;
-  background-image: url(../img/soñar-con-peliculas.jpg);
-	background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-	background-blend-mode: multiply;
-	background-color: rgba(35, 51, 36, .9);
-	border-bottom: 3px solid rgb(179, 40, 40)
-}
 
 
 /*
@@ -1167,7 +1163,6 @@ footer > img{
   }
   .logo img{
     margin:  0 50px 5px 50px;
-    transition: 0.5s;
   }
 
 

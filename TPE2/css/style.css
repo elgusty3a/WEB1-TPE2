@@ -330,14 +330,6 @@ li{
   left: 30%;
   width: 40%;
   bottom: 38%;
-
-}
-.sinop-parr>button:hover{
-  border: 3px solid var(--text-color);
-  background-color: var(--frase-nav-color);
-  color: var(--text-color);
-  font-weight: bolder;
-  transition:  opacity .5s;
 }
 
 .btn-vermas{
@@ -1237,6 +1229,12 @@ footer > img{
     left: 30%;
     width: 40%;
     bottom: 38%;
+  }
+  .sinop-parr>button:hover{
+    border: 3px solid var(--text-color);
+    background-color: var(--frase-nav-color);
+    color: var(--text-color);
+    font-weight: bolder;
   }
 
   .btn-vermas{

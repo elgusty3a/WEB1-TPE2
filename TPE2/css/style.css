@@ -55,6 +55,7 @@ li{
   position: fixed;
   left: 0;
   top: 0;
+  right: 0;
   width: 100%;
   background-color: var(--theme-color);
   box-shadow: 0 4px 5px var(--navbar-shallow-color);
@@ -1174,6 +1175,7 @@ footer > img{
   }
   .slide{
     height: 55vh;
+    max-height: 300px;
     margin: 0 20px;
   }
 

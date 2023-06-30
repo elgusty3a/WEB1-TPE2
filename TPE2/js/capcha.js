@@ -99,44 +99,44 @@ function resetearCapcha() {
 
 let array_precios = [    /* precios de los elementos que vendo */
 {
-  item: "Entrada 2D",
-  precioUnit: 1000,
+  "item": "Entrada 2D",
+  "precioUnit": 1000,
 },
 {
-  item: "Entrada 3D",
-  precioUnit: 1400,
+  "item": "Entrada 3D",
+  "precioUnit": 1400,
 },
 {
-  item: "Balde Pochoclos",
-  precioUnit: 1400,
+  "item": "Balde Pochoclos",
+  "precioUnit": 1400,
 },
 {
-  item: "Combo Dúo",
-  precioUnit: 2600,
+  "item": "Combo Dúo",
+  "precioUnit": 2600,
 },
 {
-  item: "Combo Familiar",
-  precioUnit: 4600,
+  "item": "Combo Familiar",
+  "precioUnit": 4600,
 },
 {
-  item: "Combo Pelicula",
-  precioUnit: 3400,
+  "item": "Combo Pelicula",
+  "precioUnit": 3400,
 },
 {
-  item: "Garrapiñada",
-  precioUnit: 300,
+  "item": "Garrapiñada",
+  "precioUnit": 300,
 },
 {
-  item: "Milka Oreo",
-  precioUnit: 500,
+  "item": "Milka Oreo",
+  "precioUnit": 500,
 },
 {
-  item: "Shot",
-  precioUnit: 650,
+  "item": "Shot",
+  "precioUnit": 650,
 },
 {
-  item: "Vaso de Gaseosa",
-  precioUnit: 500,
+  "item": "Vaso de Gaseosa",
+  "precioUnit": 500,
 },
 ];
 
@@ -173,14 +173,14 @@ function agregaPedido(e) {
   for (let index = 0; index < repeticiones; index++) {
     if ((cantidadItems!="")&&(cantidadItems>0)) {
       let filaShop ={
-        item: itemPedido,
-        cantidad: parseInt(cantidadItems),
-        descuento: function () {
+        "item": itemPedido,
+        "cantidad": parseInt(cantidadItems),
+        "descuento": function () {
           if(this.cantidad >= CANTMINDESCUENTO){
             return true;
           };
         },
-        subTot: function () {
+        "subTot": function () {
           let position = 0;
           while ((position < array_precios.length)&&(this.item != array_precios[position].item)) {
             position++;
